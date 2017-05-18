@@ -1,8 +1,5 @@
 /**
- * 
- */
-/**
- * @author pedro
+ * @author Pedro Victori
  *
  */
 package sliders;
