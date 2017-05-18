@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<fx:root type="javafx.scene.layout.GridPane" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints percentHeight="0.0" />
+    <RowConstraints percentHeight="0.0" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="lStart" />
+      <Label fx:id="lEnd" GridPane.columnIndex="2" />
+      <Label fx:id="lValue" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Slider fx:id="slider" GridPane.columnIndex="1" />
+   </children>
+</fx:root>
