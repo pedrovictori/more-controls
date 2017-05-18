@@ -15,7 +15,30 @@ public class LabelledSlider extends GridPane {
 	@FXML Label lStart;
 	@FXML Label lEnd;
 	@FXML Label lValue;
-
+	
+	/**
+	 * Creates a new LabelledSlider, using 0 as minimum and default value.
+	 * @param max maximum value for the slider
+	 */
+	public LabelledSlider (double max) {
+		this(0, max);
+	}
+	
+	/**
+	 * Creates a new LabelledSlider, using the given minimum value as the default value.
+	 * @param min minimum value for the slider
+	 * @param max maximum value for the slider
+	 */
+	public LabelledSlider(double min, double max) {
+		this(min, max, min);
+	}
+	
+	/**
+	 * Creates a new LabelledSlider
+	 * @param min minimum value for the slider
+	 * @param max maximum value for the slider
+	 * @param value default value for the slider
+	 */
 	public LabelledSlider(double min, double max, double value) {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
 				"ls-horizontal.fxml"));
