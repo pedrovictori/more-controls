@@ -16,6 +16,10 @@ public class LabelledSlider extends GridPane {
 	@FXML Label lEnd;
 	@FXML Label lValue;
 	
+	public LabelledSlider() {
+		this(10);
+	}
+	
 	/**
 	 * Creates a new LabelledSlider, using 0 as minimum and default value.
 	 * @param max maximum value for the slider
