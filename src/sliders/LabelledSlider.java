@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.GridPane;
+import toolbox.tools.MathTools;
 
 public class LabelledSlider extends GridPane {
 	@FXML private Slider slider;
@@ -63,8 +64,9 @@ public class LabelledSlider extends GridPane {
 		setMax(max);
 		setMin(min);
 		setValue(value);
-
-		setMajorTickUnit(max/10);
+		
+		double tick = MathTools.roundToLastPowerOfTen((int)max/10);
+		setMajorTickUnit(tick);
 		setSnapToTicks(true);
 		setMinorTickCount(0); 
 
@@ -102,6 +104,9 @@ public class LabelledSlider extends GridPane {
 	public void setMax(Double max) {
 		lEnd.setText(Integer.toString(max.intValue()));
 		maxProperty().set(max);
+		
+		double tick = MathTools.roundToLastPowerOfTen((int)Math.round(max/10));
+		setMajorTickUnit(tick);
 	}
 	
 	/**
